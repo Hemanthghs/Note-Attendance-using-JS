@@ -1,4 +1,4 @@
-bt = document.getElementsByClassName("btn")
+bt = document.getElementsByClassName("btn1")
 dateEl = document.getElementById("date")
 const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
