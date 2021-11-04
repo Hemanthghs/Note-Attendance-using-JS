@@ -1,13 +1,13 @@
 bt = document.getElementsByClassName("btn")
+dateEl = document.getElementById("date")
+const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
-var divPrEl = document.createElement("div")
-divPrEl.setAttribute("class","res")
-document.body.append(divPrEl)
-
-var divAbEl = document.createElement("div")
-divAbEl.setAttribute("class","res")
-document.body.append(divAbEl)
-// console.log(bt)
+const d = new Date();
+let month = months[d.getMonth()];
+let day = d.getDay();
+let year = d.getFullYear();
+let currDate = day + ", " + month + " " + year
+dateEl.textContent = currDate
 
 for (var i = 0; i < bt.length; i++) {
   bt[i].onclick = function () {
@@ -19,10 +19,14 @@ for (var i = 0; i < bt.length; i++) {
 }
 
 
+
+
 function confirm(){
 
     absentees = ""
     presentees = ""
+    var divPrEl = document.getElementById("present")
+    var divAbEl = document.getElementById("absent")
     
     for (var i=0; i < bt.length; i++) {
         if(bt[i].classList.contains("btn-danger")) {
@@ -33,11 +37,11 @@ function confirm(){
         }
     }
 
-    divPrEl.textContent=`*Presentees:* ${presentees}`
-    divAbEl.textContent=`*Absentees:* ${absentees}`
+    divPrEl.textContent=`${presentees}`
+    divAbEl.textContent=`${absentees}`
 
     shareA = document.getElementById("share-a")
-    shareA.href="whatsapp://send?text="+ divPrEl.textContent + "%0a%0a" +  divAbEl.textContent;
+    shareA.href="whatsapp://send?text="+ "*"+currDate+"*%0a%0a" + "*Presentees:*%0a" + divPrEl.textContent + "*Absentees:*%0a" +  divAbEl.textContent;
     shareA.setAttribute("data-action","share/whatsapp/share");
 
 }

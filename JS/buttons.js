@@ -312,7 +312,7 @@ for(var i=0;i<60;i=i+2){
     document.write(`
     <div class="row">
     <div class="col-6">
-        <button class="btn btn-danger" onclick()="btclick()">
+        <button class="btn btn-danger">
             <div class="roll">
                 ${students_list[i]["roll"]}
             </div>
@@ -322,7 +322,7 @@ for(var i=0;i<60;i=i+2){
         </button>
     </div>
     <div class="col-6">
-        <button class="btn btn-danger" onclick="btclick()">
+        <button class="btn btn-danger">
             <div class="roll">
             ${students_list[i+1]["roll"]}
             </div>
@@ -340,7 +340,7 @@ for(var i=0;i<60;i=i+2){
 document.write(`
 <div class="row">
 <div class="col-6">
-    <button class="btn btn-danger" onclick="btclick()">
+    <button class="btn btn-danger">
         <div class="roll">
             ${students_list[60]["roll"]}
         </div>
