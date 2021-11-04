@@ -33,7 +33,13 @@ function confirm(){
         }
     }
 
-    divPrEl.textContent=`Presentees: ${presentees}`
-    divAbEl.textContent=`Absentees: ${absentees}`
+    divPrEl.textContent=`*Presentees:* ${presentees}`
+    divAbEl.textContent=`*Absentees:* ${absentees}`
+
+    shareA = document.getElementById("share-a")
+    shareA.href="whatsapp://send?text="+ divPrEl.textContent +  divAbEl.textContent;
+    shareA.setAttribute("data-action","share/whatsapp/share");
 
 }
+
+
