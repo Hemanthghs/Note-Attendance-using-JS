@@ -37,7 +37,7 @@ function confirm(){
     divAbEl.textContent=`*Absentees:* ${absentees}`
 
     shareA = document.getElementById("share-a")
-    shareA.href="whatsapp://send?text="+ divPrEl.textContent +  divAbEl.textContent;
+    shareA.href="whatsapp://send?text="+ divPrEl.textContent + "%0a%0a" +  divAbEl.textContent;
     shareA.setAttribute("data-action","share/whatsapp/share");
 
 }

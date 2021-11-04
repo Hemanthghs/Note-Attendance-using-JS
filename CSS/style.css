@@ -23,3 +23,9 @@ body{
 #share {
     margin:10px 0;
 }
+
+#share-a{
+    color:white;
+    font-weight: bold;
+    text-decoration: none;
+}
