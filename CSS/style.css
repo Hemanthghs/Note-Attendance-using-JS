@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+body{
+    /* width: 100%; */
+    margin:10px;
+}
+.row{
+    margin-top:4px;
+}
+.btn{
+    height:100%;
+    width: 100%;
+    padding:4px;
+}
+
+.res {
+    width:100%;
+}
+
+.share {
+    margin:10px 0;
+}
