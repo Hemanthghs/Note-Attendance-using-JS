@@ -314,20 +314,20 @@ for(var i=0;i<60;i=i+2){
     <div class="col-6">
         <button class="btn btn-danger btn1">
             <div class="roll">
-                ${students_list[i]["roll"]}
+                <b>${students_list[i]["roll"]}</b>
             </div>
             <div class="name">
-            ${students_list[i]["name"]}
+                ${students_list[i]["name"]}
             </div>
         </button>
     </div>
     <div class="col-6">
         <button class="btn btn-danger btn1">
             <div class="roll">
-            ${students_list[i+1]["roll"]}
+                <b>${students_list[i+1]["roll"]}</b>
             </div>
             <div class="name">
-            ${students_list[i+1]["name"]}
+                ${students_list[i+1]["name"]}
             </div>
         </button>
     </div>
@@ -342,10 +342,10 @@ document.write(`
 <div class="col-6">
     <button class="btn btn-danger btn1">
         <div class="roll">
-            ${students_list[60]["roll"]}
+            <b>${students_list[60]["roll"]}</b>
         </div>
         <div class="name">
-        ${students_list[60]["name"]}
+            ${students_list[60]["name"]}
         </div>
     </button>
 </div>
