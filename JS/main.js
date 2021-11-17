@@ -3,10 +3,10 @@ dateEl = document.getElementById("date")
 const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
 const d = new Date();
-let month = months[d.getMonth()];
-let day = d.getDay();
-let year = d.getFullYear();
-let currDate = day + ", " + month + " " + year
+const month = months[d.getMonth()];
+const day = d.getDate();
+const year = d.getFullYear();
+const currDate = day + ", " + month + " " + year
 dateEl.textContent = currDate
 
 for (var i = 0; i < bt.length; i++) {
@@ -45,5 +45,4 @@ function confirm(){
     shareA.setAttribute("data-action","share/whatsapp/share");
 
 }
-
 
