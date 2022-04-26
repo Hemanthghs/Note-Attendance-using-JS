@@ -36,7 +36,7 @@ function confirm(){
     
     for (var i=0; i < bt.length; i++) {
         if(bt[i].classList.contains("btn-danger")) {
-            absentees += bt[i].firstElementChild.innerText + ", "
+            absentees += bt[i].firstElementChild.innerText + " - " + bt[i].firstElementChild.nextElementSibling.innerText + ", "
             abCount++;
         }
         else if(bt[i].classList.contains("btn-success")) {
