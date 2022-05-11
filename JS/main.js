@@ -1,6 +1,8 @@
 bt = document.getElementsByClassName("btn1")
 dateEl = document.getElementById("date")
 copyEle = document.getElementById("copy")
+markAbEle = document.getElementById("mark-ab")
+markPrEle = document.getElementById("mark-pr")
 
 const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 const abCountEle = document.getElementById("pr-Count")
@@ -14,17 +16,51 @@ const currDate = day + ", " + month + " " + year
 dateEl.textContent = currDate
 
 
-
 for (var i = 0; i < bt.length; i++) {
   bt[i].onclick = function () {
-
     this.classList.toggle("btn-danger");
     this.classList.toggle("btn-success");
     confirm();
   }
 }
 
+markAbEle.onclick = function (){
+ if(this.classList.contains("btn-light")){
+    this.classList.toggle("btn-light");
+    this.classList.toggle("btn-primary");
+    markPrEle.classList.toggle("btn-light");
+    markPrEle.classList.toggle("btn-primary");
 
+    for(var i = 0;i<bt.length;i++){
+      if(bt[i].classList.contains("btn-danger")){
+        bt[i].classList.toggle("btn-success");
+        bt[i].classList.toggle("btn-danger");
+      }
+    }
+  }
+
+
+
+}
+
+markPrEle.onclick = function (){
+  if(this.classList.contains("btn-light")){
+  this.classList.toggle("btn-light");
+  this.classList.toggle("btn-primary");
+  markAbEle.classList.toggle("btn-light");
+  markAbEle.classList.toggle("btn-primary");
+
+  for(var i = 0;i<bt.length;i++){
+    if(bt[i].classList.contains("btn-success")){
+      bt[i].classList.toggle("btn-success");
+      bt[i].classList.toggle("btn-danger");
+    }
+  }
+  }
+
+
+
+}
 
 
 function confirm(){
@@ -60,6 +96,8 @@ function confirm(){
     shareA.setAttribute("data-action","share/whatsapp/share");
 
 }
+
+
 
 copyEle.onclick = function copyToClipboard() {
   var copyText = document.getElementById("final-attendance");
