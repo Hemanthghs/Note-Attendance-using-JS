@@ -88,7 +88,7 @@ function confirm(){
 
     shareA = document.getElementById("share-a")
 
-    shareA.href="whatsapp://send?text="+ "*"+currDate+"*%0a%0a" + "*"+subjectName+"Attendance"+"*%0a%0a" + `*Presentees: (${prCount} Members)*` + "%0a" + divPrEl.textContent + "%0a%0a" + `*Absentees: (${abCount} Members)*` + "%0a" +  divAbEl.textContent;
+    shareA.href="whatsapp://send?text="+ "*"+currDate+"*%0a%0a" + "_*"+subjectName+": Attendance"+"*_%0a%0a" + `*Presentees: (${prCount} Members)*` + "%0a" + divPrEl.textContent + "%0a%0a" + `*Absentees: (${abCount} Members)*` + "%0a" +  divAbEl.textContent;
 
     shareA.setAttribute("data-action","share/whatsapp/share");
 
