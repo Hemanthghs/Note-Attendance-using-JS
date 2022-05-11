@@ -1,5 +1,7 @@
 bt = document.getElementsByClassName("btn1")
 dateEl = document.getElementById("date")
+copyEle = document.getElementById("copy")
+
 const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 const abCountEle = document.getElementById("pr-Count")
 const prCountEle = document.getElementById("ab-Count")
@@ -57,5 +59,10 @@ function confirm(){
 
     shareA.setAttribute("data-action","share/whatsapp/share");
 
+}
+
+copyEle.onclick = function copyToClipboard() {
+  var copyText = document.getElementById("final-attendance");
+  navigator.clipboard.writeText(copyText.innerText);
 }
 

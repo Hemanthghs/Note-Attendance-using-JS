@@ -4,8 +4,8 @@
     padding: 0;
 }
 body{
-    /* width: 100%; */
-    margin:0 10px 10px 10px;
+    width:30%;
+    margin:auto;
 }
 .row{
     margin-top:4px;
@@ -17,11 +17,11 @@ body{
 }
 
 
-#share {
+.btn-custom {
     margin:10px 0;
 }
 
-#share-a{
+#share-a, #copy-a{
     color:white;
     font-weight: bold;
     text-decoration: none;
