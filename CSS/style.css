@@ -63,3 +63,10 @@ body{
 #ab-Count, #pr-Count {
     color:black;
 }
+
+@media only screen and (max-width:900px) {
+    body {
+        width:auto;
+        margin:10px;
+    }
+}
