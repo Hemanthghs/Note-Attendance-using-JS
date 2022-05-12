@@ -27,6 +27,12 @@ body{
     text-decoration: none;
 }
 
+#share-a2 {
+    font-weight: bold;
+    text-decoration: none;
+    color:white;
+}
+
 .final{
     margin-top: 14px;
     border-top: 2px solid rgb(211, 211, 211);

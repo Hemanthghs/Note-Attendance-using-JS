@@ -5,7 +5,7 @@ markAbEle = document.getElementById("mark-ab")
 markPrEle = document.getElementById("mark-pr")
 subjectEle = document.getElementById("subject")
 shareBtn = document.getElementById("share-a")
-
+ShareA2 = document.getElementById("share-a2")
 
 const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 const abCountEle = document.getElementById("pr-Count")
@@ -82,11 +82,12 @@ function confirm(){
     for (var i=0; i < bt.length; i++) {
         if(bt[i].classList.contains("btn-danger")) {
             absentees += bt[i].firstElementChild.innerText + ", "
-
+            absentees2 += bt[i].firstElementChild.innerText + " - _" + bt[i].firstElementChild.nextElementSibling.innerText + "_%0a"
             abCount++;
         }
         else if(bt[i].classList.contains("btn-success")) {
             presentees += bt[i].firstElementChild.innerText + ", "
+            // presentees2 += bt[i].firstElementChild.innerText + " - _" + bt[i].firstElementChild.nextElementSibling.innerText + "_%0a"
             prCount++;
         }
     }
@@ -98,6 +99,8 @@ function confirm(){
     divAbEl.textContent=`${absentees}`
 
     shareA = document.getElementById("share-a")
+
+    shareA2.href = "whatsapp://send?text="+ "*"+currDate+"*%0a%0a" + "_*"+subjectName+" Class Attendance"+"*_%0a%0a" + `*Presentees: (${prCount} Members)*` + "%0a" + divPrEl.textContent + "%0a%0a" + `*Absentees: (${abCount} Members)*` + "%0a" +  absentees2;
 
     shareA.href="whatsapp://send?text="+ "*"+currDate+"*%0a%0a" + "_*"+subjectName+" Class Attendance"+"*_%0a%0a" + `*Presentees: (${prCount} Members)*` + "%0a" + divPrEl.textContent + "%0a%0a" + `*Absentees: (${abCount} Members)*` + "%0a" +  divAbEl.textContent;
 
