@@ -72,12 +72,17 @@ function confirm(){
 
     absentees = ""
     presentees = ""
+
+    absentees2 = ""
+    presentees2 = ""
+
     var divPrEl = document.getElementById("present")
     var divAbEl = document.getElementById("absent")
     
     for (var i=0; i < bt.length; i++) {
         if(bt[i].classList.contains("btn-danger")) {
             absentees += bt[i].firstElementChild.innerText + ", "
+
             abCount++;
         }
         else if(bt[i].classList.contains("btn-success")) {
